@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="10dp"
+    android:backgroundTint="@android:color/white"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kategori"
+        android:text="Kategori Alamat"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailAlamat"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:text="Alamat Lengkap"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/edit"
+           android:tint="@color/colorPrimaryDark"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/edit"></ImageView>
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:id="@+id/hapus"
+            android:tint="@android:color/holo_red_dark"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/trash"></ImageView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/lineAlamat"
+        android:background="@android:color/darker_gray"/>
+
+</LinearLayout>

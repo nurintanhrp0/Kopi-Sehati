@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "550819050764",
+    "firebase_url": "https://kopi-sehati.firebaseio.com",
+    "project_id": "kopi-sehati",
+    "storage_bucket": "kopi-sehati.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550819050764:android:9de22b2c91307eda264529",
+        "android_client_info": {
+          "package_name": "ventures.g45.kopisehati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550819050764-7q5ut4e2dpi44r0p88vaktaatklqhlit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ventures.g45.kopisehati",
+            "certificate_hash": "c06ae858bcca42d40a830003f78ce3c670e80dac"
+          }
+        },
+        {
+          "client_id": "550819050764-8pg0vh6dqdr252243ppu8b50hevpso0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzji3TlacHmHkXllygfx_eU3CyNyTQD-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550819050764-8pg0vh6dqdr252243ppu8b50hevpso0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingHorizontal="20dp">
+
+    <LinearLayout
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_back"
+            android:id="@+id/icBack"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="2.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="RIWAYAT ORDER"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitle"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockInfo"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/gbrInfo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/icon_belum_ada_order">
+        </ImageView>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@id/blockHeader"
+        android:visibility="gone"
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</RelativeLayout>

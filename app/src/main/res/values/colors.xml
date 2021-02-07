@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#01A1DD</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bgHeader">#DEE5EE</color>
+    <color name="abuabu">#E8EAED</color>
+    <color name="warnaHitamTrans">#33000000</color>
+    <color name="background_pressed">#ffffff</color> <!--yellow-->
+    <color name="background_normal"></color>    <!--olive-->
+    <color name="background_focused">#ffffff</color>
+    <color name="abu">#e9ecef</color>
+    <color name="biru">#17a2b8</color>
+    <color name="hijau">#28a745</color>
+    <color name="kuning">#ffc107</color>
+    <color name="bgabuabu">#555</color>
+</resources>

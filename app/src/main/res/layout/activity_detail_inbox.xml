@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_inbox"
+    android:paddingHorizontal="20dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_back"
+            android:id="@+id/icBack"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="2.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="DETAIL"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitle"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/blockHeader"
+        android:textSize="18dp"
+        android:id="@+id/isi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"></TextView>
+
+    <Button
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gunakan"
+        android:textAllCaps="false"
+        android:background="@drawable/border_white"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:id="@+id/btnGunakan"></Button>
+
+</RelativeLayout>

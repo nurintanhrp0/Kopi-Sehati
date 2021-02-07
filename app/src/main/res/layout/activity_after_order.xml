@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AfterOrder"
+    android:paddingHorizontal="20dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:id="@+id/icBack"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="1.4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Informasi Pembayaran"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitle"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_below="@id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/keterangan"
+        android:layout_marginVertical="10dp"></TextView>
+
+    <LinearLayout
+        android:id="@+id/blockNorek"
+        android:layout_below="@id/keterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingVertical="10dp"
+            android:id="@+id/txtNorek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Tujuan"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"></TextView>
+
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:id="@+id/norek"
+                android:layout_weight="1.6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_corners"
+                android:backgroundTint="@color/abu"></TextView>
+
+            <ImageView
+                android:onClick="shareNorek"
+                android:padding="8dp"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_weight="0.4"
+                android:src="@drawable/ic_copy"
+                android:id="@+id/btnShare1"
+                android:background="@drawable/radius_corners"
+                android:backgroundTint="@color/biru"
+                android:tint="@android:color/white"></ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blockTotal"
+        android:layout_below="@id/blockNorek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingVertical="10dp"
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"></TextView>
+
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:id="@+id/total"
+                android:layout_weight="1.6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_corners"
+                android:backgroundTint="@color/abu"></TextView>
+
+            <ImageView
+                android:onClick="shareTotal"
+                android:padding="8dp"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_weight="0.4"
+                android:src="@drawable/ic_copy"
+                android:id="@+id/btnShare"
+                android:background="@drawable/radius_corners"
+                android:backgroundTint="@color/biru"
+                android:tint="@android:color/white"></ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Konfirmasi Pembayaran"
+        android:textAllCaps="false"
+        android:background="@drawable/border_white"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:id="@+id/btnBKonfirmasi"></Button>
+
+</RelativeLayout>

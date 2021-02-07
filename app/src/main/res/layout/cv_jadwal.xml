@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:background="@android:color/white">
+
+  <TextView
+      android:paddingLeft="15dp"
+      android:background="@color/kuning"
+      android:gravity="center"
+      android:layout_width="80dp"
+      android:layout_height="match_parent"
+      android:id="@+id/tanggal"
+      android:text="Tanggal"
+      android:textSize="14dp"
+      android:textColor="@android:color/white"></TextView>
+
+  <LinearLayout
+      android:layout_marginHorizontal="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/jam"
+          android:text="Jam Pengantaran"
+          android:textSize="14dp"></TextView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/namaProduk"
+          android:text="Americano"
+          android:textSize="16dp"></TextView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/qty"
+          android:text="Cup"
+          android:textSize="14dp"></TextView>
+
+      <TextView
+          android:textAlignment="center"
+          android:paddingVertical="3dp"
+          android:paddingHorizontal="8dp"
+          android:background="@drawable/rounded_corner"
+          android:backgroundTint="@color/kuning"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/status"
+          android:text="Status"
+          android:textColor="@android:color/white"></TextView>
+
+  </LinearLayout>
+
+
+
+</LinearLayout>

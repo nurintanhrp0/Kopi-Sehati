@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3"
+    android:paddingHorizontal="5dp"
+    android:paddingVertical="15dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:layout_height="80dp"
+        android:id="@+id/thumbnail"
+        android:src="@drawable/img2"></ImageView>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ice Pecan Caramel"
+            android:id="@+id/namaProduk"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDR 29.000"
+            android:id="@+id/hargaProduk"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reguler | Normal"
+            android:id="@+id/jenisProduk"
+            android:textSize="14dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="end"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/jumlahItem"
+        android:text="01"
+        android:textSize="22dp"
+        android:maxLines="2"
+        android:textAlignment="textEnd"></TextView>
+
+    <TextView
+        android:layout_gravity="end"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/txtjumlahItem"
+        android:text="ITEM"
+        android:textSize="22dp"
+        android:maxLines="2"
+        android:textAlignment="textEnd"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

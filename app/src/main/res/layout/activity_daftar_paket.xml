@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarPaket"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_marginLeft="-15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_back"
+            android:id="@+id/icBack"></ImageView>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="1.4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="BERLANGGANAN"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitle"></TextView>
+
+    </LinearLayout>
+
+    <ListView
+        android:divider="@null"
+        android:layout_marginVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_item"
+        android:scrollbars="none">
+    </ListView>
+
+</LinearLayout>

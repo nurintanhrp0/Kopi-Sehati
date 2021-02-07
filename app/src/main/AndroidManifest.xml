@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ventures.g45.kopisehati">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".KopiSehati"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity android:name=".DaftarAlamat"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Promo"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name=".Activities.Promo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailBerlangganan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DaftarPaket"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".KeranjangBelanja"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AfterOrder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReferralCode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Favorite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Detail_inbox"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Voucher"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Berlangganan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Inbox"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DetailOrders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Orders"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenentukanAlamat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SimpanAlamat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Checkout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DaftarMenu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Registrasi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OTP"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignIn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="ventures.g45.kopisehati" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".KSFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".StartMyActivityAtBootReceiver"
+            android:label="StartMyServiceAtBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

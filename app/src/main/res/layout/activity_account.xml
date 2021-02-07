@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account">
+
+  <ScrollView
+      android:id="@+id/blockAkun"
+      android:layout_above="@id/blockMenuBottom"
+      android:scrollbars="none"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/blockHeader"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="15dp"
+          android:background="@android:color/white">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:layout_marginLeft="20dp"
+            android:text="Akun"
+            android:textSize="18dp"/>
+
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_below="@id/blockHeader"
+          android:padding="18dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/blockProfil">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/inpAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/coffee"
+            android:tint="@android:color/darker_gray"
+            app:civ_border_color="@color/abuabu"
+            app:civ_border_width="2dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:maxImageSize="30dp"
+            android:backgroundTint="@android:color/white"
+            app:fabSize="mini"
+            android:src="@drawable/pencil"
+            android:tint="@android:color/black"
+            app:borderWidth="1dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/inpAvatar"
+            android:id="@+id/editFoto"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:layout_below="@id/inpAvatar"
+            android:id="@+id/txtNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please wait ..."
+            android:textSize="20dp"
+            android:textColor="@android:color/darker_gray"/>
+
+
+        <TextView
+            android:textColor="@android:color/darker_gray"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/txtNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEmail"
+            android:text="Please wait ..."
+            android:textSize="16dp"/>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:paddingBottom="10dp"
+          android:layout_marginHorizontal="20dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/blockKodeReferral"
+          android:layout_below="@id/blockProfil"
+          android:background="@drawable/background_border">
+
+        <LinearLayout
+            android:id="@+id/blockInfo"
+            android:layout_marginVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+          <ImageView
+              android:layout_weight="0.4"
+              android:layout_width="0dp"
+              android:layout_height="60dp"
+              android:src="@drawable/coffee_cup"></ImageView>
+
+          <LinearLayout
+              android:layout_weight="0.6"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt1"
+                android:text="Kirimkan Temanmu KOPI GRATIS!"></TextView>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt2"
+                android:text="Pelajari Lebih Lanjut"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                ></TextView>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt3"
+            android:layout_below="@id/blockInfo"
+            android:text="Bagikan kode referral Anda"
+            android:gravity="center"></TextView>
+
+        <RelativeLayout
+            android:onClick="shareProduk"
+            android:id="@+id/blcokShare"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt3"
+            android:background="@drawable/background_border"
+            android:backgroundTint="@color/colorPrimaryDark">
+
+          <Button
+              android:onClick="shareProduk"
+              android:layout_centerHorizontal="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/colorPrimaryDark"
+              android:id="@+id/btnBagikan"
+              android:text=""
+              android:textColor="@android:color/white"></Button>
+
+          <ImageView
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="10dp"
+              android:tint="@android:color/white"
+              android:layout_width="50dp"
+              android:layout_height="22dp"
+              android:src="@drawable/share"
+              android:layout_alignParentRight="true">
+          </ImageView>
+
+        </RelativeLayout>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:paddingHorizontal="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/blockKodeReferral"
+          android:background="@android:color/white"
+          android:layout_marginTop="20dp"
+          android:id="@+id/blockLink"
+          android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/location"
+            android:id="@+id/gbralamat"
+            android:tint="@android:color/black">
+        </ImageView>
+
+        <TextView
+            android:layout_toRightOf="@id/gbralamat"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/lineAlamat"
+            android:layout_below="@id/alamat"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_below="@id/lineAlamat"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_voucher"
+            android:id="@+id/gbrvoucher"
+            android:tint="@android:color/black">
+        </ImageView>
+
+        <TextView
+            android:layout_below="@id/lineAlamat"
+            android:layout_toRightOf="@id/gbrvoucher"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voucher"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/lineVoucher"
+            android:layout_below="@id/help"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_below="@+id/voucher"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/help"
+            android:id="@+id/gbrhelp">
+        </ImageView>
+
+        <TextView
+            android:layout_below="@+id/voucher"
+            android:layout_toRightOf="@id/gbrsk"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/lineHelp"
+            android:layout_below="@id/voucher"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_below="@id/help"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sk"
+            android:id="@+id/gbrsk">
+        </ImageView>
+
+        <TextView
+            android:layout_below="@id/help"
+            android:layout_toRightOf="@id/gbrsk"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms of Service"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/lineSk"
+            android:layout_below="@id/sk"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:tint="@android:color/black"
+            android:layout_below="@id/sk"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:id="@+id/gbrdevice">
+        </ImageView>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/sk"
+            android:layout_toRightOf="@id/gbrdevice"
+            android:textSize="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logged in Devices"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/linedevice"
+            android:layout_below="@id/device"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_below="@id/linedevice"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/kebijakan"
+            android:id="@+id/gbrkebijakan">
+        </ImageView>
+
+        <TextView
+            android:layout_toRightOf="@id/gbrkebijakan"
+            android:textSize="16dp"
+            android:layout_below="@id/linedevice"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/kebijakan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/lineKebijakan"
+            android:layout_below="@id/kebijakan"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_below="@id/lineKebijakan"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/rate"
+            android:id="@+id/gbrrate">
+        </ImageView>
+
+        <TextView
+            android:layout_toRightOf="@id/gbrrate"
+            android:textSize="16dp"
+            android:layout_below="@id/lineKebijakan"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:textColor="@android:color/black">
+        </TextView>
+
+      </RelativeLayout>
+
+      <Button
+          android:layout_marginTop="30dp"
+          android:layout_marginBottom="30dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnLogOut"
+          android:layout_below="@id/blockLink"
+          android:text="Logout"
+          android:background="@drawable/background_border"
+          android:backgroundTint="@android:color/holo_red_dark"
+          android:textColor="@android:color/white"
+          android:layout_marginHorizontal="20dp"/>
+
+
+    </RelativeLayout>
+
+  </ScrollView>
+
+  <LinearLayout
+      android:background="@drawable/radius_corners"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/blockMenuBottom"
+      android:weightSum="4">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/home">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:src="@drawable/ic_home">
+      </ImageView>
+
+      <TextView
+          android:id="@+id/txtHome"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Home"
+          android:textAlignment="center"
+          android:textSize="16dp"
+          android:textColor="@color/colorPrimaryDark">
+      </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/orders">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:src="@drawable/ic_orders">
+      </ImageView>
+
+      <TextView
+          android:id="@+id/txtOrders"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Orders"
+          android:textAlignment="center"
+          android:textSize="16dp"
+          android:textColor="@color/colorPrimaryDark">
+      </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/inbox">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:src="@drawable/ic_inbox">
+      </ImageView>
+
+      <TextView
+          android:id="@+id/txtInbox"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Inbox"
+          android:textAlignment="center"
+          android:textSize="16dp"
+          android:textColor="@color/colorPrimaryDark">
+      </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/account">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:src="@drawable/ic_account">
+      </ImageView>
+
+      <TextView
+          android:id="@+id/txtAccount"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Account"
+          android:textAlignment="center"
+          android:textSize="16dp"
+          android:textColor="@color/colorPrimaryDark">
+      </TextView>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</RelativeLayout>

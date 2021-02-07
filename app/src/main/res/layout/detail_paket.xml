@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp"
+    android:background="@android:color/white"
+    >
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockHeader"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:tint="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_back"
+                android:id="@+id/icBack"></ImageView>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_marginVertical="8dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNama"
+                android:text="Nama Paket"></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_below="@id/blockHeader"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/img1"
+            android:id="@+id/thumbnail"></ImageView>
+
+        <ListView
+            android:divider="@null"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_item"></ListView>
+
+        <TextView
+            android:layout_marginHorizontal="20dp"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:layout_marginVertical="20dp"
+            android:id="@+id/txtTotal"
+            android:layout_below="@id/list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"></TextView>
+
+        <TextView
+            android:textStyle="italic"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:layout_below="@id/list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:id="@+id/hargaAwal"></TextView>
+
+        <View
+            android:layout_marginVertical="33dp"
+            android:layout_below="@id/list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_alignStart="@id/hargaAwal"
+            android:layout_alignEnd="@id/hargaAwal"/>
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textAlignment="textEnd"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hargaAwal"
+            android:text="RP 0"
+            android:layout_toRightOf="@id/txtTotal"
+            android:id="@+id/total"></TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtInfo"
+                android:text="include/exclude ongkos kirim"></TextView>
+
+            <Button
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Berlangganan"
+                android:id="@+id/btnBerlangganan"
+                android:background="@drawable/background_border"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="40dp"
+                android:textColor="@android:color/white"></Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

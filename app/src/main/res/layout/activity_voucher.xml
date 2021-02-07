@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Voucher"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/blockHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/icBack"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.4"
+            android:src="@drawable/ic_back"></ImageView>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="2.2"
+            android:gravity="center_horizontal"
+            android:text="VOUCHER"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noVoucher"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/icon_tidak_ada_voucher"></ImageView>
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YAH, BELUM ADA VOUCHER ... "
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/holo_red_dark"></TextView>
+
+    </LinearLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:scrollbars="none"
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+
+    <LinearLayout
+        android:layout_below="@id/blockRiwayat"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/blockProduk">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Produk Kami"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtPromo"></TextView>
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="0.2"
+                android:textAlignment="textEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="See All"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/txtSeeAll"></TextView>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/blockPromo">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

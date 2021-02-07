@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTP"
+    android:background="@android:color/white"
+    android:paddingHorizontal="20dp">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/blockTitle">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:id="@+id/logo"></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:text="Masukkan kode yang dikirimkan ke nomor handphone Anda."
+        android:layout_below="@+id/logo"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimaryDark">
+    </TextView>
+
+    <EditText
+        android:maxLength="6"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="0 0 0 0 0 0"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="20dp"
+        android:id="@+id/inpOtp">
+    </EditText>
+
+    <Button
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVerifikasi"
+        android:layout_below="@+id/inpOtp"
+        android:layout_marginTop="10dp"
+        android:text="Verifikasi"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="10dp">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:text="00 : 00"
+      android:layout_below="@id/inpOtp"
+      android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+      android:id="@+id/txtTimer"
+        android:textSize="16dp"
+      ></TextView>
+
+    <Button
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnInpPin"
+        android:layout_below="@+id/btnVerifikasi"
+        android:layout_marginTop="80dp"
+        android:text="MASUKKAN PIN"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="15dp">
+    </Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtInfo"
+        android:text="Klik masukkan PIN jika dalam 20 detik Anda belum menerima pesan kode."
+        android:layout_below="@id/btnInpPin"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp">
+    </TextView>
+
+  </RelativeLayout>
+
+</RelativeLayout>

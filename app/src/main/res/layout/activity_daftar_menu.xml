@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarMenu"
+    android:background="@android:color/white">
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginHorizontal="15dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/blockKategoriMenu"-->
+    <!--        android:weightSum="6"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/espresso"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_espresso"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_espresso">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtEspresso"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Espresso">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/singleOrigin"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_singleOrigin"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_single_origin">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtSingleOrigin"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Single Origin"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textAlignment="center">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/juiceSmoothies"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_juiceSmoothies"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_juice_smoothies">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtJuiceSmoothies"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Juice Smoothies"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textAlignment="center">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/nonCoffee"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_nonCoffee"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_noncoffee">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtNonCoffee"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Non Coffee"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textAlignment="center">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/snacks"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_snacks"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_snacks">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtSnacks"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Snacks"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_gravity="center">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/others"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/ic_others"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:src="@drawable/ic_others">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </ImageView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:id="@+id/txtOthers"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Others"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_gravity="center">&ndash;&gt;-->
+    <!--&lt;!&ndash;            </TextView>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/blockKategoriMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <ScrollView
+        android:id="@+id/blockMenu"
+        android:layout_above="@id/blockTotal"
+        android:fillViewport="true"
+        android:layout_below="@id/blockKategoriMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ListView
+                android:id="@+id/list_espresso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></ListView>
+
+            <ListView
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/list_singleOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/list_espresso"></ListView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:background="@drawable/radius_corners"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/blockTotal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:id="@+id/txtTotal"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTotal"
+            android:text="IDR 0"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/total"></TextView>
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="PESAN"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/darker_gray"
+            android:clickable="false"
+            android:textColor="@android:color/white"
+            android:id="@+id/btnPesan"></Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

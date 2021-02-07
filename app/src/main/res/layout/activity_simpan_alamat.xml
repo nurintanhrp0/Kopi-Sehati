@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimpanAlamat"
+    android:paddingHorizontal="20dp">
+
+  <LinearLayout
+      android:paddingVertical="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/blockHeader"
+      android:orientation="horizontal"
+      android:weightSum="2">
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back"
+        android:id="@+id/icBack"></ImageView>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:layout_marginVertical="8dp"
+        android:layout_weight="1.4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan Alamat"
+        android:gravity="center_horizontal"
+        android:id="@+id/txtTitle"></TextView>
+
+  </LinearLayout>
+
+  <ScrollView
+      android:scrollbars="none"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/blockHeader">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtDetailInformasi"
+          android:text="Detail Informasi"
+          android:layout_marginVertical="15dp"
+          android:textSize="18dp"
+          android:textStyle="bold"></TextView>
+
+      <fragment
+          android:layout_below="@id/txtDetailInformasi"
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+      <LinearLayout
+          android:layout_marginVertical="25dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/blockDetailInformasi"
+          android:layout_below="@id/map"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockAlamat"
+            android:orientation="horizontal">
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/map"
+              android:tint="@android:color/black"></ImageView>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/txtAlamat"
+              android:text="Alamat untuk pengiriman pesanan"
+              android:layout_marginLeft="10dp"
+              android:textSize="15dp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="15dp"
+            android:background="@drawable/radius_corners"
+            android:backgroundTint="@color/abuabu"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockTambahCatatan"
+            android:orientation="horizontal">
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="35dp"
+              android:src="@drawable/add_note"
+              android:tint="@android:color/darker_gray"></ImageView>
+
+
+          <EditText
+              android:textColor="@android:color/black"
+              android:textSize="12dp"
+              android:ellipsize="end"
+              android:singleLine="true"
+              android:background="@null"
+              android:id="@+id/txtTambahCatatan"
+              android:layout_marginLeft="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:hint="Tambahkan Catatan: Contoh nomor rumah, nama gedung atau"></EditText>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/abuabu"
+            android:layout_marginTop="10dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/blockSimpanAlamat"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="15dp">
+
+          <ImageView
+              android:layout_marginRight="-10dp"
+              android:layout_width="70dp"
+              android:layout_height="30dp"
+              android:src="@drawable/save_alamat"></ImageView>
+
+          <EditText
+              android:textColor="@android:color/black"
+              android:background="@null"
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/txtSimpanAlamat"
+              android:hint="Alamat Sebagai contoh 'Rumah saya'"
+              android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/abuabu"
+            android:layout_marginTop="5dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/blockNama"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="15dp">
+
+          <ImageView
+              android:layout_marginRight="-10dp"
+              android:layout_width="70dp"
+              android:layout_height="30dp"
+              android:src="@drawable/user"
+              android:tint="@android:color/black"></ImageView>
+
+          <TextView
+              android:textColor="@android:color/black"
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/txtNama"
+              android:hint="Nama User"
+              android:textSize="15dp"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/abuabu"
+            android:layout_marginTop="5dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/blockNomor"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="15dp">
+
+          <ImageView
+              android:layout_marginRight="-10dp"
+              android:layout_width="70dp"
+              android:layout_height="30dp"
+              android:src="@drawable/phone"
+              android:tint="@android:color/black"></ImageView>
+
+          <TextView
+              android:textColor="@android:color/black"
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/txtNomor"
+              android:hint="+62800987654"
+              android:textSize="15dp"></TextView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/abuabu"
+            android:layout_marginTop="5dp"></View>
+
+      </LinearLayout>
+
+      <Button
+          android:layout_marginBottom="20dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Simpan Alamat"
+          android:id="@+id/btnSimpan"
+          android:layout_below="@id/blockDetailInformasi"
+          android:layout_marginHorizontal="30dp"
+          android:background="@drawable/background_border"
+          android:backgroundTint="@color/colorPrimaryDark"
+          android:textColor="@android:color/white"></Button>
+
+    </RelativeLayout>
+  </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="Daftar Pesanan"
+                android:textSize="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/title"
+                android:textAlignment="center"
+                android:id="@+id/tambahPesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+   Tambah Pesanan"
+                android:layout_gravity="center"
+                android:background="@drawable/background_border"
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:elevation="3dp"></TextView>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/close"
+                android:id="@+id/icClose"
+                android:tint="@android:color/holo_red_dark"></ImageView>
+
+            <ListView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tambahPesanan"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockDaftar">
+
+            </ListView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

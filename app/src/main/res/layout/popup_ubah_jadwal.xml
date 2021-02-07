@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Cup"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textAllCaps="true"
+        android:paddingVertical="15dp"></TextView>
+
+    <ImageView
+        android:tint="@android:color/holo_red_dark"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:src="@drawable/close"
+        android:id="@id/btnBatalkan"></ImageView>
+
+    <RelativeLayout
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockMenu"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMenu"
+            android:text="Menu"></TextView>
+
+        <Spinner
+            android:layout_alignParentRight="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_nama"></Spinner>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/blockMenu"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockJam"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtJam"
+            android:text="Jam"></TextView>
+
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/pencil"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:src="@drawable/pencil"></ImageView>
+
+        <TextView
+            android:layout_toLeftOf="@id/pencil"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/jam"></TextView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/blockJam"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockQty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtQty"
+            android:text="Quantity (Cup)"></TextView>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/background_border"
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/decrement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="—"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/display"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_border"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/increment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="25dp" />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/blockQty"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/btnSimpan"
+        android:background="@drawable/background_border"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@android:color/white"></Button>
+
+    <Button
+        android:visibility="gone"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batalkan"
+        android:id="@+id/btnBatalkan"
+        android:background="@drawable/background_border"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@android:color/white"></Button>
+
+
+
+</RelativeLayout>

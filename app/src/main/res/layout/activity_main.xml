@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/blockMenuBottom">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockHeader">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockLogo">
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/ic_fav"
+                    android:src="@drawable/ic_fav"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="23dp"/>
+
+                <ImageView
+                    android:tint="@android:color/black"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/ic_cart"
+                    android:src="@drawable/shoppingcart"
+                    android:layout_toRightOf="@id/ic_fav"
+                    android:layout_marginTop="23dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txtCart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@id/ic_cart"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/lingkaran"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"></TextView>
+
+                <ViewFlipper
+                    android:layout_marginTop="-35dp"
+                    android:inAnimation="@anim/right_to_left"
+                    android:outAnimation="@anim/left_to_right"
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoStart="true"
+                    android:flipInterval="3000">
+
+                </ViewFlipper>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockGreeting"
+                android:layout_below="@id/blockLogo"
+                android:background="@drawable/background_border"
+                android:layout_marginHorizontal="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockGreetingHeader"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ic_awan"
+                        android:src="@drawable/greetings_pagi_awan"
+                        android:tint="@android:color/darker_gray"/>
+
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ic_awan2"
+                        android:src="@drawable/greetings_pagi_awan"
+                        android:tint="@android:color/darker_gray"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ic_greetings"
+                        android:src="@drawable/greetings_pagi_matahari"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_greetings"
+                        android:text="Selamat Pagi"
+                        android:textColor="@android:color/black"
+                        android:textSize="17dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockAlamat"
+                    android:layout_below="@id/blockGreetingHeader"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outlet terdekat kami ada di"
+                        android:id="@+id/txtInfo"
+                        ></TextView>
+
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginTop="2dp"
+                            android:tint="@color/colorPrimaryDark"
+                            android:layout_width="30dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/map"></ImageView>
+
+                        <TextView
+                            android:id="@+id/txtAlamat"
+                            android:textSize="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please wait ..."
+                            android:textAlignment="center"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_marginVertical="10dp"
+                android:id="@+id/blockBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner_berlangganan"
+                android:layout_below="@id/blockGreeting"></ImageView>
+
+            <LinearLayout
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockKategoriMenu"
+                android:layout_below="@id/blockBanner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/baris1"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_border"
+                        android:id="@+id/espresso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_espresso">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtEspresso"
+                            android:textSize="14dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="18dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Espresso">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_border"
+                        android:id="@+id/singleOrigin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_single_origin">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtSingleOrigin"
+                            android:textSize="14dp"
+                            android:textAlignment="center"
+                            android:lines="2"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="Single Origin">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@drawable/background_border"
+                        android:id="@+id/juiceSmoothies"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_juice_smoothies">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtJuiceSmoothies"
+                            android:textSize="14dp"
+                            android:layout_gravity="center"
+                            android:lines="2"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Juice &amp; Smoothies">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginVertical="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/baris2"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_border"
+                        android:id="@+id/nonCoffee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_noncoffee">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtNonCoffee"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="18dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Non Coffee">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/background_border"
+                        android:id="@+id/snacks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_snacks">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtSnacks"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="18dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Snacks">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@drawable/background_border"
+                        android:id="@+id/others"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_others">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/txtOthers"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="18dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Others">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:background="@drawable/radius_corners"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockMenuBottom"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/home">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_home">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/orders">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_orders">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orders"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/inbox">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_inbox">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtInbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/account">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
